@@ -16,19 +16,17 @@ public final class MatrixToEdgeList {
   // Assumes matrix is square.
   public static List<Edge> toEdgeList(Double[][] matrix) {
     List<Edge> edges = new ArrayList<>();
-    int n = matrix.length;
-
-    for (int from = 0; from < n; from++) {
-      for (int to = 0; to < n; to++) {
-        if (from == to && matrix[from][to] != null) {
-          throw new IllegalArgumentException();
-        }
-        if (matrix[from][to] != null) {
-          edges.add(new Edge(from, to, matrix[from][to]));
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[i].length; j++) {
+        if (matrix[i][j] != null) {
+          if (i == j) {
+            throw new IllegalArgumentException();
+          } else {
+            edges.add(new Edge(i, j, matrix[i][j]));
+          }
         }
       }
     }
-
     return edges;
   }
 }
