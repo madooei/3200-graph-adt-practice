@@ -48,7 +48,7 @@ code/
 - `scripts/test.sh practice.GraphReverseTest` — compiles everything and runs only that test class.
 - `scripts/run.sh demo.GraphReverseDemo` — compiles everything and runs that one demo. Every problem class has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `practice.GraphReverse` — `reverse`, which returns a new graph on the same vertices with every edge flipped and its weight kept.
 - `practice.MatrixToEdgeList` — `toEdgeList`, which scans every cell of the matrix and returns a `List` with one `Edge` per entry that is not `null`. An entry on the diagonal that is not `null` makes it throw.
